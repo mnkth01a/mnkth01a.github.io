@@ -6,7 +6,7 @@ h1, h2, h3, p {
 h1 {
    background-image: url("../images/pattern.jpeg");
    text-align: center;
-   font-size: 8rem;
+   font-size: 6rem;
    color: khaki;
 }
 
@@ -16,7 +16,7 @@ h3 {
 }
 
 h2.item {
-   font-size: 4rem;
+   font-size: 3rem;
    color: white;
 }
 
