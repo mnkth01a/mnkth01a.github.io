@@ -11,12 +11,12 @@ h1 {
 }
 
 h3 {
-   font-size: 2rem;
+   font-size: 1.5rem;
    color: black;
 }
 
 h2.item {
-   font-size: 3rem;
+   font-size: 2rem;
    color: white;
 }
 
@@ -42,7 +42,7 @@ h2.item {
 }
 
 .descr {
-   font-size: 1.5rem;
+   font-size: 1rem;
    color: black;
 }
 
