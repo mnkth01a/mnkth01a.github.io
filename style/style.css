@@ -1,5 +1,8 @@
 /* Main style sheet for Desmoto's Arts & Crafts website */
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -8,14 +11,17 @@ h1 {
    text-align: center;
    font-size: 6rem;
    color: khaki;
+   font-family: 'Abril-Fatface', sans-serif;
 }
 
 h3 {
+   font-family: 'Work-Sans', 'Merriweather', sans-serif;
    font-size: 1.5rem;
    color: black;
 }
 
 h2.item {
+   font-family: 'Merriweather', sans-serif;
    font-size: 2rem;
    color: white;
 }
@@ -45,4 +51,3 @@ h2.item {
    font-size: 1rem;
    color: black;
 }
-
