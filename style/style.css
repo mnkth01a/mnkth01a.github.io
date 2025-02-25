@@ -12,6 +12,12 @@ h1 {
    font-family: 'Abril Fatface', sans-serif;
 }
 
+h2 {
+   font-family: 'Work Sans', 'Merriweather', sans-serif;
+   font-size: 3rem;
+   color: black;
+}
+
 h3 {
    font-family: 'Work Sans', 'Merriweather', sans-serif;
    font-size: 1.5rem;
@@ -20,7 +26,7 @@ h3 {
 
 h2.item {
    font-family: 'Merriweather', sans-serif;
-   font-size: 2rem;
+   font-size: 3rem;
    color: white;
 }
 
@@ -46,6 +52,7 @@ h2.item {
 }
 
 .descr {
+   font-family: sans-serif;
    font-size: 1rem;
    color: black;
 }
