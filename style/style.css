@@ -48,7 +48,8 @@ h2.item {
 }
 
 .product_img {
-   margin-left: auto;
+   float: right;
+   margin-right: 0;
 }
 
 .descr {
