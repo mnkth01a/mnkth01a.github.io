@@ -1,7 +1,26 @@
 /* Main style sheet for Desmoto's Arts & Crafts website */
 
+* {
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 12px;
+}
+
+/* I want the products to be in a grid next to each other and fit in the screen */
+body {
+   background-image: url("../images/pattern.jpeg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin: 0;
+   padding: 0;
+}
+
 p {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   word-wrap: break-word;
 }
 
 h1 {
@@ -31,6 +50,11 @@ h2.item {
    color: white;
 }
 
+a {
+   text-decoration: none;
+   cursor: grab;
+}
+
 #brush {
    background-color: mediumspringgreen;
 }
@@ -45,19 +69,11 @@ h2.item {
 
 /* Styling the price class */
 .price {
+   font-family: 'Abril Fatface', sans-serif;
+   text-align: center;
    color: blue;
    font-weight: bold;
    font-size: 1.5rem;
-}
-
-/* I want the products to be in a grid next to each other and fit in the screen */
-body {
-   background-image: url("../images/pattern.jpeg");
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   margin: 0;
-   padding: 0;
 }
 
 /* This is the container that holds the product classes */
@@ -89,8 +105,9 @@ body {
    grid-template-areas:
       "title"
       "image"
-      "price"
-      "descr";
+      "descr"
+      "price";
+
    grid-gap: 0.5rem;
 
    margin: 1rem;
@@ -106,30 +123,40 @@ body {
    transition: transform 0.3s ease-in-out;
 }
 
-.product:active {
+.product:active a:active {
    transform: scale(0.95);
    cursor: grabbing;
 }
 
+/* Styles for the product images */
 .product_img {
    grid-area: image;
    object-fit: contain;
+   max-width: 100%;
+   height: auto;
+   border-radius: 0.5rem;
 }
 
 .descr {
    font-family: sans-serif;
    font-size: 1rem;
    color: black;
+   line-height: 1.5;
    position: relative;
    left: 3rem;
    top: 0;
+   text-align: left;
 }
 
+/* Additional styles for the footer */
 footer {
+   background-color: #f2f2f2;
+   padding: 1rem;
+   border-top: 1px solid #ccc;
    font-family: 'Work Sans', sans-serif;
    font-size: 1rem;
    color: black;
-   text-align: center;
+   text-align: justify;
    position: relative;
    top: 2rem;
 }
@@ -183,25 +210,4 @@ footer {
       width: 100%;
       max-width: 250px;
    }
-}
-
-/* Additional styles for the footer */
-footer {
-   background-color: #f2f2f2;
-   padding: 1rem;
-   border-top: 1px solid #ccc;
-}
-
-/* Additional styles for the product images */
-.product_img {
-   max-width: 100%;
-   height: auto;
-   border-radius: 0.5rem;
-}
-
-/* Additional styles for the product descriptions */
-.descr {
-   font-size: 1rem;
-   line-height: 1.5;
-   color: #333;
 }
