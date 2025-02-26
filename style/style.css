@@ -55,6 +55,18 @@ a {
    cursor: grab;
 }
 
+#brushes {
+   background-color: hsla(123, 22%, 83%, 0.6);
+}
+
+#frames {
+   background-color: hsla(0, 22%, 83%, 0.6);
+}
+
+#paints {
+   background-color: hsla(186, 22%, 83%, 0.6);
+}
+
 #brush {
    background-color: mediumspringgreen;
 }
@@ -91,8 +103,6 @@ a {
 .product {
    height: 50rem;
    width: 40rem;
-
-   background-color: white;
 
    border: 2px solid rgb(75, 70, 74);
    border-radius: 0.5rem;
