@@ -43,21 +43,38 @@ h2.item {
    background-color: skyblue;
 }
 
+/* Styling the price class */
 .price {
    color: blue;
    font-weight: bold;
+   font-size: 1.5rem;
 }
 
+/* I want the products to be in a grid next to each other and fit in the screen */
+body {
+   background-image: url("../images/pattern.jpeg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin: 0;
+   padding: 0;
+}
+
+/* This is the container that holds the product classes */
 .products {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
+   max-width: 100%;
+   margin: 0 auto;
+   padding: 1rem;
 }
 
+/* This is the class for each product */
 .product {
-   height: 48rem;
-   width: 50rem;
+   height: 50rem;
+   width: 40rem;
 
    background-color: white;
 
@@ -80,6 +97,18 @@ h2.item {
    padding: 1rem;
 
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+   cursor: grab;
+}
+
+.product:hover {
+   transform: scale(1.05);
+   transition: transform 0.3s ease-in-out;
+}
+
+.product:active {
+   transform: scale(0.95);
+   cursor: grabbing;
 }
 
 .product_img {
@@ -176,11 +205,3 @@ footer {
    line-height: 1.5;
    color: #333;
 }
-
-/* Additional styles for the product prices */
-.price {
-   font-size: 1.5rem;
-   color: #ff4500;
-   font-weight: bold;
-}
-
