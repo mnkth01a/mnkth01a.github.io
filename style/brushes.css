@@ -1,0 +1,11 @@
+/* Style sheet for Desmoto's Arts & Crafts Brushes */
+
+/* ID's the most specific of the specifity */
+#brushes {
+   background-color: hsla(123, 22%, 83%, 0.6);
+}
+
+#brush {
+   background-color: mediumspringgreen;
+}
+

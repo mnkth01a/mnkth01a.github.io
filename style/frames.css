@@ -1,0 +1,10 @@
+/* Style sheet for Desmoto's Arts & Crafts Frames */
+
+/* ID's the most specific of the specifity */
+#frames {
+   background-color: hsla(0, 22%, 83%, 0.6);
+}
+
+#frame {
+   background-color: lightcoral;
+}

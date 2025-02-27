@@ -1,0 +1,10 @@
+/* Main style sheet for Desmoto's Arts & Crafts website */
+
+/* ID's the most specific of the specifity */
+#paints {
+   background-color: hsla(186, 22%, 83%, 0.6);
+}
+
+#paint {
+   background-color: skyblue;
+}

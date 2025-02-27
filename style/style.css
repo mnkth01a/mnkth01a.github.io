@@ -84,31 +84,6 @@ a {
    cursor: grab;
 }
 
-/* ID's the most specific of the specifity */
-#brushes {
-   background-color: hsla(123, 22%, 83%, 0.6);
-}
-
-#frames {
-   background-color: hsla(0, 22%, 83%, 0.6);
-}
-
-#paints {
-   background-color: hsla(186, 22%, 83%, 0.6);
-}
-
-#brush {
-   background-color: mediumspringgreen;
-}
-
-#frame {
-   background-color: lightcoral;
-}
-
-#paint {
-   background-color: skyblue;
-}
-
 /* Styling the price class */
 .price {
    font-family: 'Abril Fatface', sans-serif;
