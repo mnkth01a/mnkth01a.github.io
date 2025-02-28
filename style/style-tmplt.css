@@ -1,0 +1,51 @@
+/* Main style sheet template for use with html templates */
+
+/* Set how the total width and height of an element is calculated.
+
+   The box-sizing property defines how the width and height of an element are calculated: whether they should include padding and borders, or not.
+
+   The default value is content-box, which means that the width and height properties only include the content, but not the padding, border, or margin.
+
+   The border-box value includes the padding and border in the width and height calculations, so that the total size of the element is equal to the specified width and height.
+
+Values
+
+   content-box
+
+      This is the initial and default value as specified by the CSS standard. The width and height properties include the content, but does not include the padding, border, or margin. For example, .box {width: 350px; border: 10px solid black;} renders a box that is 370px wide.
+
+      Here, the dimensions of the element are calculated as: width = width of the content, and height = height of the content. (Borders and padding are not included in the calculation.)
+
+   border-box
+
+      The width and height properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, .box {width: 350px; border: 10px solid black;} renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use border-box to make the element disappear. 
+*/
+* {
+   box-sizing: border-box;
+}
+
+
+/* Set the default font size for the entire document */
+html {
+   font-size: 12px;
+}
+
+
+/* I want the products to be in a grid next to each other and fit in the screen */
+body {
+   background-image: url("../images/pattern.jpeg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin: 0;
+   padding: 0;
+}
+
+
+header {}
+
+
+main {}
+
+
+footer {}
