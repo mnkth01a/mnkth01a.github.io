@@ -31,7 +31,7 @@ html {
 }
 
 /* I want the products to be in a grid next to each other and fit in the screen */
-body {
+body.index_body {
    background-image: url("../images/pattern.jpeg");
    background-size: cover;
    background-repeat: no-repeat;

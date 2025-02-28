@@ -1,5 +1,16 @@
 /* Main style sheet for Desmoto's Arts & Crafts website */
 
+/* Override the body style */
+body {
+   background-image: none;
+   background-color: hsla(186, 22%, 83%, 0.6);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   margin: 0;
+   padding: 0;
+}
+
 /* ID's the most specific of the specifity */
 #paints {
    background-color: hsla(186, 22%, 83%, 0.6);
