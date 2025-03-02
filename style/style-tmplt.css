@@ -1,5 +1,9 @@
 /* Main style sheet template for use with html templates */
 
+/*******************/
+/* Global stylings */
+/*******************/
+
 /* Set how the total width and height of an element is calculated.
 
    The box-sizing property defines how the width and height of an element are calculated: whether they should include padding and borders, or not.
@@ -31,7 +35,9 @@ html {
 }
 
 
-/* I want the products to be in a grid next to each other and fit in the screen */
+/*******************************************/
+/* this is the display part of the webpage */
+/*******************************************/
 body {
    display: grid;
 
@@ -53,7 +59,7 @@ body {
    background-repeat: no-repeat;
    background-attachment: fixed;
 
-   height:100%;
+   height: 100%;
 
    margin: 0;
 
@@ -65,22 +71,6 @@ body {
    z-index: -1;
 
    text-align: justify;
-}
-
-#body_p {
-   font-family: 'Courier New', Courier, monospace;
-   font-size: small;
-   font-weight: 700;
-}
-
-header,
-main,
-footer,
-.sidebar {
-   border: 2px solid #000;
-   border-radius: 2rem;
-
-   display: inline-flex;
 }
 
 
@@ -98,30 +88,6 @@ header {
    font-weight: 400;
 }
 
-.main_nav {
-   margin: 0;
-   padding: 0%;
-
-   list-style: none;
-
-   font: 1.2em Verdana, Geneva, Tahoma, sans-serif;
-
-   display: flex;
-}
-
-.main_nav a {
-   text-decoration: none;
-
-   color: #000;
-
-   padding: 1em 2em;
-
-   display: block;
-}
-
-.push {
-   margin-left: auto;
-}
 
 main {
    grid-area: main;
@@ -138,7 +104,7 @@ main {
 }
 
 
-.sidebar {
+aside {
    grid-area: sd;
 
    align-items: start;
@@ -170,4 +136,55 @@ footer {
 
    position: relative;
    top: 0%;
+}
+
+/*********************************/
+/* This is the common attributes */
+/*********************************/
+header,
+main,
+footer,
+aside {
+   border: 2px solid #000;
+   border-radius: 2rem;
+
+   display: inline-flex;
+}
+
+/******************/
+/* class stylings */
+/******************/
+.main_nav {
+   margin: 0;
+   padding: 0%;
+
+   list-style: none;
+
+   font: 1.2em Verdana, Geneva, Tahoma, sans-serif;
+
+   display: flex;
+}
+
+.main_nav a {
+   text-decoration: none;
+
+   color: #000;
+
+   padding: 1em 2em;
+
+   display: block;
+}
+
+.push {
+   margin-left: auto;
+}
+
+
+/*************/
+/* id styles */
+/*************/
+#body_p {
+   font-family: 'Courier New', Courier, monospace;
+   font-size: small;
+   font-weight: 700;
 }
