@@ -29,9 +29,11 @@ Values
 }
 
 
-/* Set the default font size for the entire document */
+/* Set the defaults for the entire document */
 html {
    font-size: 12px;
+
+   
 }
 
 
