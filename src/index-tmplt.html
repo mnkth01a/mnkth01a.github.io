@@ -5,12 +5,13 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Product Template</title>
+
+   <title>Index Template</title>
 
    <!-- Stylesheet -->
-   <link rel="stylesheet" href="../style/style.css">
-   <link rel="stylesheet" href="../style/product-template.css">
-   
+   <link rel="stylesheet" href="../style/style-tmplt.css">
+   <!-- <link rel="stylesheet" href="../style/product-template.css"> -->
+
    <!-- Google Fonts -->
 
    <!-- Abril Fatface -->
@@ -34,50 +35,63 @@
       rel="stylesheet">
 </head>
 
-<body>
+<body class="body" id="body">
+   <p id="body_p">body</p>
+
    <header class="header" id="header">
-      <h1 class="logo">Desmotos Arts & Crafts</h1>
+      <p id="header_p">header</p>
+      <h1 class="logo">header text goes here. </h1>
+
+      <nav class="header_nav" id="header_nav_id">
+         <p>header nav</p>
+         <ul class="main_nav" id="ul_id">
+            <li><a class="local" href="#">Home</a></li>
+            <li><a class="local" href="#">link1</a></li>
+            <li><a class="push" href="#">link2</a></li>
+         </ul>
+      </nav>
+
    </header>
 
-   <main class="main" id="main">
-      <article class="products" id="products">
+   <main class="main" id="main_id">
+      <p id="main_p">main</p>
+      <article class="article" id="article_id">
+         <p>article</p>
 
-         <!-- Section for brushes -->
-         <section class="product" id="brushes">
-            <a href="../index.html">
 
-               <h2 class="item" id="brush">Brushes</h2>
-               <figure class="product_img">
-                  <img src="../images/hacksaw.jpeg" alt="hacksaw brushes">
+         <!-- Content container -->
+         <section class="section" id="section_id">
+            <a href="#" class="a_class" id="a_id">
+
+               <h2 class="h2_class" id="h2_id">selection header text</h2>
+
+               <figure class="figure_img">
+                  <img src="" alt="figure image here">
                   <figcaption>
-                     <h3>Hacksaw Brushes</h3>
+                     <h3>figcaption text</h3>
                   </figcaption>
                </figure>
-               <p class="descr">Made of the highest quality oak,<br /> Hacksaw brushes are known for thier weight and
-                  ability to
-                  hold<br />paint in large amounts.<br /> Available in different sizes.<br />
-                  <span class="price"><br />Starting at $3.00 /
-                     brush.
-                  </span>
-               </p>
+
+               <p class="descr">Descriptive text goes here.</p>
+
             </a>
          </section>
 
       </article>
    </main>
 
+
+   <!-- Side bar content -->
+   <section class="sidebar" id="sidebar_id">
+      <p>sidebar content</p>
+   </section>
+
+
    <!-- Footer styling -->
-   <footer class="footer" id="footer">
+   <footer class="footer" id="footer_id">
+      <p>footer</p>
 
-      <nav class="footer_nav" id="footer_nav">
-         <ul>
-            <li><a class="btn" href="../index.html">Home</a></li>
-            <li><a class="btn" href="./frames.html">Frames</a></li>
-            <li><a class="btn" href="./paints.html">Paints</a></li>
-         </ul>
-      </nav>
-
-      <p>Copyright &copy; 2023 Desmotos Arts & Crafts </p>
+      <p id="footer_p">Copyright &copy; 2025 </p>
    </footer>
 
 </body>
