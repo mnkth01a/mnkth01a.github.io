@@ -51,7 +51,7 @@ body {
 
    grid-template-areas:
       "hd hd hd hd hd hd hd hd hd"
-      "sd sd main main main main main main main"
+      "main main main main main main main sd sd"
       " ft ft ft ft ft ft ft ft ft";
 
    background-color: #fff;
@@ -67,16 +67,19 @@ body {
 
    padding: 15px;
 
-   border: 5px solid #000;
+   border: 5px dashed #000;
    border-radius: 3rem;
 
    z-index: -1;
 
-   text-align: justify;
+   text-align: left;
 }
 
 
 header {
+   display:flex;
+   justify-content:space-evenly;
+
    grid-area: hd;
 
    align-items: center;
@@ -92,9 +95,12 @@ header {
 
 
 main {
-   grid-area: main;
+   display:flex;
+   justify-content: flex-start;
+   flex-direction:column;
 
-   align-items: center;
+
+   grid-area: main;
 
    z-index: 3;
 
@@ -107,6 +113,9 @@ main {
 
 
 aside {
+   display: flex;
+   flex-direction:column;
+
    grid-area: sd;
 
    align-items: start;
@@ -118,15 +127,16 @@ aside {
    font-family: 'Abril Fatface', sans-serif;
    font-size: medium;
    font-weight: 400px;
-
-   height: 460px;
 }
 
 
 footer {
-   grid-area: ft;
+   display:flex;
+   justify-content: center;
+   flex-direction:column;
+   align-items: center;
 
-   align-items: self-start;
+   grid-area: ft;
 
    z-index: 5;
 
