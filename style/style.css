@@ -1,4 +1,8 @@
-/* Main style sheet for Desmoto's Arts & Crafts website */
+/* Main style sheet template for use with html templates */
+
+/*******************/
+/* Global stylings */
+/*******************/
 
 /* Set how the total width and height of an element is calculated.
 
@@ -20,264 +24,292 @@ Values
 
       The width and height properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, .box {width: 350px; border: 10px solid black;} renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use border-box to make the element disappear. 
 */
-
 * {
    box-sizing: border-box;
 }
 
-/* Set the default font size for the entire document */
+
+/* Set the defaults for the entire document */
 html {
-   font-size: 12px;
+   font-size: 14px;
 }
 
-/* I want the products to be in a grid next to each other and fit in the screen */
-body.index_body {
-   background-image: url("../images/pattern.jpeg");
+
+/*******************************************/
+/* this is the display part of the webpage */
+/*******************************************/
+body {
+   display: grid;
+
+   width: 1910px;
+   height: 965px;
+
+   grid-template-columns: repeat(12, [col_start] 1fr);
+   grid-auto-rows: minmax(50px, auto);
+
+   grid-gap: 30px 10px;
+
+   /* Responsive: Small screen setup */
+   grid-template-areas:
+      "hd"
+      "nav"
+      "main"
+      "sd"
+      "ad"
+      "ft";
+
+   background-color: #fff;
+
+   background-image: url('#');
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
    background-attachment: fixed;
+
    margin: 0;
+
    padding: 0;
+
+   border: 5px dashed #000;
+   border-radius: 3rem;
+
+   z-index: -1;
 }
 
-/* paragraph styling */
-p {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-   text-wrap: stable;
-}
-
-p.descr {
-   text-wrap: stable;
-}
-
-/* headers styling */
-h1 {
-   background-image: url("../images/pattern.jpeg");
-   text-align: center;
-   font-size: 6rem;
-   color: khaki;
-   font-family: 'Abril Fatface', sans-serif;
-   /*position:fixed;*/
-}
-
-h2 {
-   font-family: 'Work Sans', sans-serif;
-   font-size: 3rem;
-   color: black;
-}
-
-h3 {
-   font-family: 'Merriweather', sans-serif;
-   font-size: 1.5rem;
-   color: black;
-}
-
-h2.item {
-   font-family: 'Merriweather', sans-serif;
-   font-size: 3rem;
-   color: white;
-}
-
-/* link styling */
-a {
-   text-decoration: none;
-   cursor: grab;
-}
-
-/* Styling the price class */
-.price {
-   font-family: 'Abril Fatface', sans-serif;
-   text-align: center;
-   color: blue;
-   font-weight: bold;
-   font-size: 1.5rem;
-   margin: 0;
-}
-
-/* This is the container that holds the product classes */
-.products {
+header {
    display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-around;
+
+   grid-area: hd;
+   /*        row col  row end  col end  */
+   /* grid-area: 1 / 1 / span 1 / span 12; */
+
    align-items: center;
-   max-width: 100%;
-   margin: 0 auto;
-   padding: 1rem;
-}
 
-/* This is the class for each product */
-.product {
-   height: 50rem;
-   width: 40rem;
+   z-index: 5;
 
-   border: 2px solid rgb(75, 70, 74);
-   border-radius: 0.5rem;
+   background-color: #1972a5;
 
-   display: grid;
-   place-content: space-between;
-   place-items: center;
-   place-self: center;
-
-   grid-template-rows: 1fr 1fr 1fr;
-   grid-template-columns: 1fr;
-   grid-template-areas:
-      "title"
-      "image"
-      "descr"
-      "price";
-
-   grid-gap: 0.5rem;
-
-   margin: 3rem;
-   padding: 0.5rem;
-
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-   cursor: grab;
-}
-
-/* define element behaviour for hovering */
-.product:hover {
-   transform: scale(1.05);
-   transition: transform 0.3s ease-in-out;
-}
-
-/* define element behaviour for clicking */
-.product:active a:active {
-   transform: scale(0.95);
-   cursor: grabbing;
-}
-
-/* Styles for the product images */
-.product_img {
-   grid-area: image;
-   object-fit: contain;
-   max-width: 100%;
-   height: auto;
-   border-radius: 0.5rem;
-}
-
-/* Styles for the product description */
-.descr {
-   font-family: "Helvetica", sans-serif;
+   font-family: 'Space Mono', sans-serif;
    font-size: 1rem;
-   color: black;
-   line-height: 1.5;
-   position: relative;
-   left: 1rem;
-   top: 0;
-   text-align: left;
+   font-weight: 400;
 }
 
-/* Style for the footer */
-footer {
-   background-color: #f2f2f2;
-   padding: 1rem;
-   border-top: 1px solid #0f0b0b;
-   font-family: 'Work Sans', sans-serif;
-   font-size: 1rem;
-   color: black;
-   text-align: center;
-   height: 75px;
-   width: 100%;
+nav {
+   display: flex;
+   justify-content: space-around;
+   align-content: space-around;
 
-   cursor: normal;
-}
+   gap: 20px 10px;
 
-/* link footer's <a> curor to pointer */
-footer a:hover {
-   cursor: pointer;
-}
+   flex-flow: column;
 
-footer p {
-   display: inline-flexbox;
-   justify-content:  center;
+   grid-area: nav;
+   /*        row col  row end  col end  */
+   /* grid-area: 2 / 1 / span 1 / span 12; */
+
    align-items: center;
-   text-align: center;
-   margin: 0;
+
+   z-index: 5;
+
+   color: #000;
+   background-color: #fff;
+
+   font: 0.75rem 'Courier New', Courier, monospace;
+   font-weight: 400;
 }
 
-/* Style the footer links footer_nav to display inline with no buttons */
-nav.footer_nav {
-   display: inline_block;
+nav ul {
    list-style: none;
-   padding: 0;
-   margin: auto;
+
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
 }
 
-/* Style the footer links footer_nav list items to display inline with no buttons */
-nav.footer_nav li {
-   display: inline;
-   position: relative;
-   left: -10px;
+nav ul a {
+   text-decoration: none;
 
-   margin-right: 1rem;
-   margin-top: 0;
+   color: #000;
 
-   border: 1px solid #000;
-   border-radius: 0.5rem;
+   padding: 20px;
+}
 
-   padding: 0.5rem;
+main {
+   display: flex;
+   justify-content: flex-start;
+   flex-direction: column;
 
-   background-color: #67f07b;
+
+   grid-area: main;
+   /*        row col  row end  col end  */
+   /* grid-area: 3 / 1 / span 4 / span 9; */
+
+   z-index: 3;
+
+   background-color: #96e09f;
 
    font-family: 'Work Sans', sans-serif;
    font-size: 0.75rem;
-   color: black;
-
-   text-decoration: none;
-   text-align: center;
+   font-weight: 400px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-   .products {
+aside {
+   display: flex;
+   flex-direction: column;
+
+   grid-area: sd;
+   /*        row col  row end  col end  */
+   /* grid-area: 3 / 10 / span 2 / span 3; */
+
+   align-items: start;
+
+   z-index: 3;
+
+   background-color: #5ba5aa85;
+
+   font-family: 'Abril Fatface', sans-serif;
+   font-size: 0.75rem;
+   font-weight: 400px;
+}
+
+#ad_id {
+   display: flex;
+   flex-direction: column;
+
+   grid-area: ad;
+   /*        row col  row end  col end  */
+   /* grid-area: 5 / 10 / span 2 / span 3; */
+
+   z-index: 3;
+
+   background-color: blanchedalmond;
+
+   font-family: 'Abril Fatface', sans-serif;
+   font-size: 0.75rem;
+   font-weight: 400;
+}
+
+footer {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+
+   grid-area: ft;
+   /*        row col  row end  col end  */
+   /* grid-area: 7 / 1 / span 1 / span 12; */
+
+   z-index: 5;
+
+   background-color: #e34343;
+
+   font-family: cursive, sans-serif;
+   font-size: 0.75rem;
+   font-weight: 400px;
+
+   position: relative;
+   top: 0%;
+}
+
+/*******************************************/
+
+
+/*********************************/
+/* This is the common attributes */
+/*********************************/
+header,
+nav,
+main,
+aside,
+#ad_id,
+footer {
+   border: 2px solid #000;
+   border-radius: 2rem;
+}
+
+
+/******************/
+/* class stylings */
+/******************/
+
+/*************/
+/* id styles */
+/*************/
+#body_p {
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 0.75rem;
+   font-weight: 400;
+}
+
+
+/***********************/
+/* Responsive Rulesets */
+/***********************/
+
+/* Responsive: Medium screen setup */
+@media only screen and (min-width: 480px) {
+   body {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+         "hd hd"
+         "nav nav"
+         "sd main"
+         "sd main"
+         "sd main"
+         "ad main"
+         "ad main"
+         "ft ft";
+   }
+
+   nav {
+      margin: 0;
+      padding: 0%;
+
+      list-style: none;
+      font-style: normal;
+
+      font: 1rem Verdana, Geneva, Tahoma, sans-serif;
+
+      color: #000;
+      flex-flow: row;
+   }
+
+   nav ul {
+      flex-direction: row;
+   }
+}
+
+/* Responsive: Large screen setup */
+@media only screen and (min-width: 1326px) {
+   body {
+      grid-template-columns: 10% 4fr 1fr;
+      grid-template-areas:
+         "hd hd hd"
+         "nav main sd"
+         "nav main sd"
+         "nav main sd"
+         "nav main ad"
+         "ft ft ft";
+   }
+
+   nav {
+      margin: 0;
+      padding: 0%;
+
+      list-style: none;
+      font-style: normal;
+
+      font: 1rem Verdana, Geneva, Tahoma, sans-serif;
+
+      color: #000;
+
+      flex-flow: column;
+   }
+
+   nav ul {
       flex-direction: column;
-      align-items: center;
    }
 
-   .product {
-      width: 100%;
-      max-width: 400px;
-   }
 }
-
-@media (max-width: 480px) {
-   h1 {
-      font-size: 4rem;
-   }
-
-   h2 {
-      font-size: 2rem;
-   }
-
-   h3 {
-      font-size: 1.2rem;
-   }
-
-   .product {
-      width: 100%;
-      max-width: 300px;
-   }
-}
-
-@media (max-width: 320px) {
-   h1 {
-      font-size: 3rem;
-   }
-
-   h2 {
-      font-size: 1.5rem;
-   }
-
-   h3 {
-      font-size: 1rem;
-   }
-
-   .product {
-      width: 100%;
-      max-width: 250px;
-   }
-}
-
-/* End of Responsive design */
