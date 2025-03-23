@@ -24,14 +24,19 @@ Values
 
       The width and height properties include the content, padding, and border, but do not include the margin. Note that padding and border will be inside of the box. For example, .box {width: 350px; border: 10px solid black;} renders a box that is 350px wide, with the area for content being 330px wide. The content box can't be negative and is floored to 0, making it impossible to use border-box to make the element disappear. 
 */
-* {
-   box-sizing: border-box;
-}
-
 
 /* Set the defaults for the entire document */
 html {
+   font-family: sans-serif;
    font-size: 14px;
+   box-sizing: border-box;
+
+   /* Set screen width and height to screen size */
+   width: 100vw;
+   height: 100vh;
+
+   display: flex;
+   flex-direction: column;
 }
 
 
@@ -40,9 +45,6 @@ html {
 /*******************************************/
 body {
    display: grid;
-
-   width: 1910px;
-   height: 965px;
 
    grid-template-columns: repeat(12, [col_start] 1fr);
    grid-auto-rows: minmax(50px, auto);
@@ -59,12 +61,6 @@ body {
       "ft";
 
    background-color: #000000;
-
-   background-image: url('#');
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-attachment: fixed;
 
    margin: 0;
 
@@ -93,6 +89,12 @@ header {
    font-family: 'Space Mono', sans-serif;
    font-size: 1rem;
    font-weight: 400;
+
+   background-image: url('#');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
 }
 
 nav {
@@ -117,6 +119,12 @@ nav {
 
    font: 0.75rem 'Courier New', Courier, monospace;
    font-weight: 400;
+
+   background-image: url('#');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
 }
 
 nav ul {
@@ -153,6 +161,12 @@ main {
    font-family: 'Work Sans', sans-serif;
    font-size: 0.75rem;
    font-weight: 400px;
+
+   background-image: url('#');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
 }
 
 aside {
@@ -172,6 +186,12 @@ aside {
    font-family: 'Abril Fatface', sans-serif;
    font-size: 0.75rem;
    font-weight: 400px;
+
+   background-image: url('#');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
 }
 
 #ad_id {
@@ -219,6 +239,12 @@ footer {
 
    position: relative;
    top: 0%;
+
+   background-image: url('#');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
 }
 
 /*******************************************/
